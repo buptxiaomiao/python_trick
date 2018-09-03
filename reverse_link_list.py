@@ -37,7 +37,6 @@ def reverse_link_list(root):
         head = _head
         _head = tmp
     
-    root.next = None
     print_link_list(head)
     return head
 

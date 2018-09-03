@@ -29,10 +29,8 @@ def print_link_list(root):
 def reverse_link_list(root):
     """反转链表"""
     print 'after reversed link list....'
-    if not root or not root.next:
-        return root
-    head = root
-    _head = root.next
+    head = None
+    _head = root
     while _head:
         tmp = _head.next
         _head.next = head

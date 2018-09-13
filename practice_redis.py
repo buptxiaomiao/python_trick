@@ -20,6 +20,7 @@ print r_db.get('123')
 
 
 # 哈希表(字典)
+# hset & hget
 r_db.hset('i_am_user_id','user_name', 'xiaomiao' )
 print r_db.hget('i_am_user_id', 'user_name')
 try:
@@ -30,4 +31,12 @@ except:
 # return None
 print r_db.hget('i_am_user_id', 'user_age')
 
+
+# hmset & hmget
+d = {
+   'name': "i_am_name",
+   'age': 10
+}
+r_db.hmset('user', d)
+print r_db.hmget('user', ['name', 'age'])
 
